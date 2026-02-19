@@ -1,0 +1,105 @@
+.sidebar {
+    width: 64px;
+    height: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    margin-bottom: 1.5rem;
+}
+
+.menu-btn {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.menu-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+.sidebar-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.sidebar-menu.hide {
+    display: none;
+}
+
+.sidebar-menu.show {
+    display: flex;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0.5rem;
+    gap: 1rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Sidebar */
+.sidebar-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 2px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+.sidebar-item {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+    opacity: 1;
+}
+
+.sidebar-item:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+.sidebar-item.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
+    border-left: 2px solid var(--accent-primary);
+}
