@@ -185,14 +185,15 @@ interface SidebarItemProps {
     onClick: () => void;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ icon, active, onClick }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({ icon, label, active, onClick }) => {
     return (
         <div
             className={`sidebar-item ${active ? 'active' : ''}`}
-            title={active ? 'Active' : ''}
+            title={label}
             onClick={onClick}
         >
             {icon}
+            <span className="sidebar-item-label">{label}</span>
         </div>
     );
 };
