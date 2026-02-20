@@ -57,6 +57,10 @@
     background-color: var(--bg-tertiary);
 }
 
+.share-btn-text {
+    margin-left: 6px;
+}
+
 .run-btn {
     background-color: var(--accent-primary);
     color: white;
@@ -77,4 +81,42 @@
 .run-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+@media (max-width: 768px) {
+    .navbar {
+        height: 52px;
+        padding: 0 0.5rem;
+    }
+
+    .file-name {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .navbar-right {
+        gap: 0.4rem;
+    }
+
+    .icon-btn {
+        padding: 0.4rem;
+    }
+
+    .share-btn {
+        padding: 0.4rem;
+    }
+
+    .share-btn-text {
+        display: none;
+    }
+
+    .run-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
