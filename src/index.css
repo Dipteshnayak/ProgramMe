@@ -36,7 +36,11 @@ body {
   overflow: hidden;
   /* App-like feel */
   height: 100vh;
+  height: 100dvh;
+  /* dynamic viewport height for mobile browsers */
   width: 100vw;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
