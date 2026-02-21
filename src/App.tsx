@@ -139,8 +139,6 @@ function App() {
   useEffect(() => {
     setCode(DEFAULT_CODE[activeTab]);
     setOutput([]); // Clear output on tab change
-    setMobileView('editor'); // Switch back to editor view on mobile
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll back to top
   }, [activeTab]);
 
   // Load Pyodide
