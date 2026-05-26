@@ -199,7 +199,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon, label, active, onClick 
 };
 
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     return (
         <aside className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
